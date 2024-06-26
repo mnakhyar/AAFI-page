@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #C93636;
+    padding: 5px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-left .logo {
+    height: 40px;  /* Adjusted height for smaller logo */
+    margin-left: 20px;  /* Added margin to the left */
+}
+
+nav {
+    flex: 5;
+    text-align: center;
+	margin-left: 0px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+	margin-right: 20px;
+}
+
+.header-right .social-icon {
+    height: 20px;  /* Adjusted height for smaller social icons */
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu.open .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open .line2 {
+    opacity: 0;
+}
+
+.burger-menu.open .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    background-color: #C93636;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    padding-right: 20px; /* Adjust padding to the right */
+    margin-right: auto; 
+	z-index: 3;
+}
+
+.dropdown-menu a {
+    color: #FFFFFF;
+    padding: 8px;
+    text-decoration: none;
+    border-top: 1px solid #FFFFFF;
+    width: 100%; /* Make links take full width */
+	
+}
+
+.dropdown-menu .social-icon {
+    height: 20px;  /* Adjusted height for smaller social icons in the dropdown menu */
+    margin-left: 0; /* Remove left margin for dropdown menu */
+}
+
+main {
+
+}
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+    background-color: #1E2A44; /* Adjust background color as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 900;
+	z-index: 2;
+}
+
+.banner img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70%;
+    max-width: 100%; /* Adjust as needed */
+    object-fit: cover; /* Ensures the image covers the bottom right */
+	padding-right: 0px;
+}
+.main-container {
+    display: flex;
+    height: 1000px; /* Full height minus the banner height */
+}
+
+.left-section {
+    background-color: #FAF9F6;
+    width: 30%; /* 30% width */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.sidebar{
+	bottom: 0px;
+	display: inline-block;
+	
+}
+
+
+.sidebar .sidebar-item{
+	color: #C93636;
+	font-weight: bold;
+	font-size: 14x;
+	padding-bottom: 10px;
+}
+
+.content-sidebar{
+	margin-left: 40px;	
+	margin-top: 25px;
+}
+
+.content-sidebar .title-sidebar {
+	font-size: 18px;
+
+}
+
+.highlight{
+	font-weight: bold;
+	color: #C93636;
+	border-radius: 6px;
+	background: white;
+	padding: 15px; 
+	padding-left: 8px;
+	padding-top: 7px;
+	padding-right: 10px;
+	width: 600px;
+	height: 10px;  
+}
+
+
+
+.right-section {
+    background-color: #fff;
+    width: 70%; /* 70% width */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.container {
+    text-align: center;
+    background: #fff;
+	padding-top: 0px;
+	padding-left: 70px;
+	padding-right: 70px;
+    max-width: 700px;
+	z-index: -2;
+}
+
+.merah {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.judul {
+	color: #C93636;
+	text-align: left;
+}
+
+.paragraph {
+	text-align: left;
+}
+
+.visi-text{
+		color: #C93636;
+	text-align: left;
+	font-weight: bold;
+	padding-top: 20px;
+}
+.container-visi{
+	background-color: #C93636;
+	width: 700px;
+	height: 100px;
+	border-radius: 6px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.container-visi p{
+	padding: 25px;
+}
+
+.misi-text{
+	color:  #2c3e50;
+	text-align: left;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.mission-item {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    background: #34495e;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 12px;
+	text-align: left;
+}
+
+
+
+
+
+
+
+footer {
+    background-color: #1C2949;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    nav, .header-right {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+    }
+    .header-left {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .dropdown-menu {
+        display: none !important;
+    }
+}
+footer {
+    background-color: #1B2942;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+	z-index: 4;
+}
+
+.footer-left {
+    flex: 1;
+	text-align: left;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-contact {
+    margin-top: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-icon {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-right {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+	text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-right {
+        display: none;
+    }
+    
+    .footer-left {
+        width: 100%;
+        text-align: center;
+    }
+}
